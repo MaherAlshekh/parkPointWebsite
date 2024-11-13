@@ -1,0 +1,328 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Main container for scroll snapping */
+main {
+    padding-top: 20px; /* Adjust padding slightly for the top of the main container */
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+/* Section Styling */
+section {
+    padding: 120px 20px 80px;
+    text-align: center;
+    scroll-snap-align: start;
+}
+
+section:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+section:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+section h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Specifieke sectie-styling voor 'Waarom ParkPoint' */
+.why-parkpoint {
+    background-color: #e6f7ff; /* Lichte blauwe achtergrond */
+}
+
+.why-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.why-feature {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.why-feature h3 {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.why-feature p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Specifieke sectie-styling voor 'Wat het Kost' */
+.what-it-costs {
+    background-color: #fff9e6; /* Lichte gele achtergrond */
+}
+
+.pricing-plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.pricing-plan {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.pricing-plan h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.pricing-plan p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 24px;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Specifieke sectie-styling voor 'Support' */
+.support {
+    background-color: #f0f8ff; /* Lichte blauwe achtergrond */
+}
+
+.support-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.support-option {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.support-option h3 {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.support-option p {
+    font-size: 16px;
+    color: #555;
+}
+
+.support-option a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.support-option a:hover {
+    text-decoration: underline;
+}
+
+/* Algemene styling voor de sectie */
+.how-it-works {
+    padding: 100px 20px;
+    background-color: #f9fafc; /* Lichte achtergrondkleur */
+    color: #333;
+    text-align: center;
+}
+
+.how-it-works-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.how-it-works-title h2 {
+    font-size: 42px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.how-it-works-title p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 60px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Grid layout voor functies */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.feature-item {
+    position: relative;
+    background-color: #ffffff; /* Witte achtergrond voor duidelijk contrast */
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px); /* Licht oplichten bij hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Schaduw versterkt bij hover */
+}
+
+.feature-item h3 {
+    font-size: 24px;
+    color: #007bff; /* Blauw voor titels */
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 16px;
+    color: #666; /* Donkergrijs voor goede leesbaarheid */
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Header and Navigation */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo {
+    width: 20%;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+.download-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #000;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Hero Section Styling */
+.hero-section {
+    background-image: url('images/filters_quality(75).webp');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
